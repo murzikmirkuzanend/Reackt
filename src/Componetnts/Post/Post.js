@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './Post.css'
     ;
 
 const Post = (props) => {
@@ -8,9 +8,9 @@ const Post = (props) => {
 
 
     return (
-        <div>
+        <div className={'itemHederPost'}>
 
-            <div>
+            <div className={'itemPost'}>
                 <p>id:{id} </p>
                 <p> userId:{userId}</p>
                 <p> title:{title}</p>

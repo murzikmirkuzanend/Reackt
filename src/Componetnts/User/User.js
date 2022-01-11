@@ -9,7 +9,7 @@ const User = (props) => {
 
 
     return (
-        <div>
+        <div className={'itemUsers'}>
             <div className={'item'}>
                 <p>ID:{id}</p>
                 <p>Name:{name}</p>

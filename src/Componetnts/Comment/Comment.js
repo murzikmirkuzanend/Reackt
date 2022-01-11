@@ -1,4 +1,6 @@
-import React from 'react';
+import React from 'react'
+    import './Comment.css'
+    ;
 
 const Comment = (props) => {
    
@@ -6,8 +8,8 @@ const Comment = (props) => {
    
    
     return (
-        <div>
-            <div>
+        <div className={'itemComments'}>
+            <div className={'itemComment'}>
                 <p>postId:{postId}</p>
                 <p>id:{id}</p>
                 <p>name:{name}</p>
