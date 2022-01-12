@@ -1,0 +1,23 @@
+.itemShip{
+    display: flex;
+    border: 2px solid purple;
+
+    margin: 10px;
+}
+.itemSips{
+    display: block;
+margin-left: 50px;
+    width: 188px;
+
+}
+
+.shipsIMG{
+    margin-left: 60%;
+
+}
+
+img{
+    height: 100px;
+    width: 100px;
+
+}
