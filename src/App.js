@@ -1,7 +1,6 @@
-import './App.css'
+import './App.css';
 
 
-    ;
 import Users from "./Componetnts/components/Users/Users";
 
 function App() {

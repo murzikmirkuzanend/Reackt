@@ -1,21 +1,20 @@
 import React from 'react';
 
-const User = (props) => {
+const User = ({user:{id, name}, GetUserId}) => {
 
-    const {id, name, username, GetUserId} = props;
+
 
 
     return (
-        <div className={'itemUsers'}>
-            <div className={'item'}>
+        <div >
+
                 <p>ID:{id}</p>
                 <p>Name:{name}</p>
-                <p>Username{username}</p>
 
-                <button onClick={() => {
+                <button onClick={() =>
                     GetUserId(id)
-                }}>GetDetails</button>
-            </div>
+                }>GetDetails</button>
+
 
         </div>
     );

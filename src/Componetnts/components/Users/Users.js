@@ -29,12 +29,9 @@ const Users = () => {
         <div>
 
 
-            <div>
-            {users.map(value => < User key={value.id}
-                                      id={value.id}
-                                      name={value.name}
-                                      username={value.username} GetUserId={GetUserId}/>)}
-            </div>
+            <div>{users.map(value => < User key={value.id}
+                                      user={value}
+                                       GetUserId={GetUserId}/>)}</div>
 
             {user && <div>
                 <p>id:{user.id}</p>
