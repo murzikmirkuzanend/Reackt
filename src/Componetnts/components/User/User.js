@@ -1,11 +1,8 @@
-import React from 'react'
-    import './UserStayil.css';
-
-
+import React from 'react';
 
 const User = (props) => {
 
-    let {id, name, username, email} = props;
+    const {id, name, username, GetUserId} = props;
 
 
     return (
@@ -14,7 +11,10 @@ const User = (props) => {
                 <p>ID:{id}</p>
                 <p>Name:{name}</p>
                 <p>Username{username}</p>
-                <p>email:{email}</p>
+
+                <button onClick={() => {
+                    GetUserId(id)
+                }}>GetDetails</button>
             </div>
 
         </div>
