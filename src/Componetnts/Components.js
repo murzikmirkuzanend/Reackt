@@ -14,22 +14,22 @@ const Components = () => {
 
     useEffect(() => {
         userServices.getAll()
-            .then(value => {setUsers(value)
-                setFilterUser(value)
+            .then(value => {setUsers([...value])
+                setFilterUser([...value])
             })
     }, [])
 
     const getFilter = (data) => {
-        let filterDown = [users]
+        let filterDown = [...users]
 
         if (data.name) {
-            filterDown = filterDown.filter(user => user.name.toLocaleLowerCase().includes(data.name.toLocaleLowerCase()))
+            filterDown = filterDown.filter(user => user.name.toLowerCase().includes(data.name.toLowerCase()))
         }
         if (data.username) {
-            filterDown = filterDown.filter(user => user.username.toLocaleLowerCase().includes(data.username.toLocaleLowerCase()))
+            filterDown = filterDown.filter(user => user.username.toLowerCase().includes(data.username.toLowerCase()))
         }
         if (data.email) {
-            filterDown = filterDown.filter(user => user.email.toLocaleLowerCase().includes(data.email.toLocaleLowerCase()))
+            filterDown = filterDown.filter(user => user.email.toLowerCase().includes(data.email.toLowerCase()))
         }
         setFilterUser(filterDown)
 
