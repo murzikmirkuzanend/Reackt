@@ -1,21 +1,21 @@
 import './User.css'
 
 
-const User = ({user, getUser}) => {
+const User = ({user}) => {
 
-    const {id, name, email} = user;
+    const {id, name, username, email} = user;
 
     return (
-        <div className={'userPhaser'}>
+       <div>
 
-            <div className={'UserHeader'}>
+
                 <h3>id:{id}</h3>
                 <p>name: {name}</p>
+                <p>username:{username}</p>
                 <p>email: {email}</p>
 
-            </div>
 
-            <button  className={'btn'} onClick={() => getUser(user)}>Details</button>
+
         </div>
     );
 };

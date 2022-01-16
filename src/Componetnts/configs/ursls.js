@@ -4,5 +4,5 @@ export default baseUrs
 
 export const urls = {
     users: '/users',
-    posts: '/posts'
+
 }

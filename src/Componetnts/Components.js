@@ -1,38 +1,46 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 
 import Users from "./components/Users/Users";
-import UserDetails from "./components/UserDetails/UserDetails";
-import Posts from "./components/Posts/Posts";
-import {postServices} from "./services/post.services";
-import './Components.css'
+import {userServices} from "./services/user.services";
+import Form from "./components/Form/Form";
 
 
 const Components = () => {
 
-    const [user, setUser] = useState(null);
-    const [posts, setPosts] = useState([]);
+    let [users, setUsers] = useState([]);
+    let [filterUser, setFilterUser] = useState([]);
 
 
-    const getUser = (user) => {
-        setUser(user)
+    useEffect(() => {
+        userServices.getAll()
+            .then(value => {setUsers(value)
+                setFilterUser(value)
+            })
+    }, [])
 
-    }
+    const getFilter = (data) => {
+        let filterDown = [users]
 
-    const getUserId = (id) => {
-        postServices.getByUserId(id)
-            .then(value => setPosts(value))
+        if (data.name) {
+            filterDown = filterDown.filter(user => user.name.toLocaleLowerCase().includes(data.name.toLocaleLowerCase()))
+        }
+        if (data.username) {
+            filterDown = filterDown.filter(user => user.username.toLocaleLowerCase().includes(data.username.toLocaleLowerCase()))
+        }
+        if (data.email) {
+            filterDown = filterDown.filter(user => user.email.toLocaleLowerCase().includes(data.email.toLocaleLowerCase()))
+        }
+        setFilterUser(filterDown)
+
     }
 
 
     return (
         <div>
-            <div className={'componentsUser'}>
-                <Users getUser={getUser}/>
-                {user && <UserDetails user={user} getUserId={getUserId}/>}
-            </div>
 
-            {posts && <Posts posts={posts}/>}
+            <Form getFilter={getFilter}/>
+            <Users users={filterUser}/>
 
 
         </div>
