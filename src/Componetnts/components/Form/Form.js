@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 
+import './Form.css'
+
 const Form = ({getFilter}) => {
     
     const [form, setForm] = useState({name:'', username:'', email:''});
@@ -16,9 +18,9 @@ const Form = ({getFilter}) => {
     }
 
     return (
-        <div>
+        <div className={'FormDiv'}>
             
-            <form>
+            <form className={'FormStyle'}>
                 <label >Name:<input type="text" name={'name'} value={form.name} onChange={StarForm}/></label>
                 <label >Username:<input type="text" name={'username'} value={form.username} onChange={StarForm}/></label>
                 <label >email:<input type="text" name={'email'} value={form.email} onChange={StarForm}/></label>
