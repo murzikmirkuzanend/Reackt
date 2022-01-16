@@ -1,0 +1,24 @@
+.userPhaser{
+    border: 2px solid red;
+    background: purple;
+    width: 284px;
+    margin: 15px;
+    height: 162px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+.UserHeader{
+color: aquamarine;
+    margin-left: 15px;
+}
+.btn{
+    background: red;
+    border-radius: 25px;
+    color: gold;
+    margin-left: 15px;
+
+}

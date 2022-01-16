@@ -1,15 +1,13 @@
 import './App.css';
 
+import Components from "./Componetnts/Components";
 
-import Users from "./Componetnts/components/Users/Users";
 
 function App() {
     return (
 
         <div>
-            <Users/>
-
-
+            <Components/>
         </div>
 
     );
