@@ -6,9 +6,9 @@ const Footer = () => {
         <div>
             <div className={'FooterHead'}>
 
-                <NavLink to='/'> </NavLink>
-                <NavLink to='/users'>Users</NavLink>
-                <NavLink to='/posts'>Posts</NavLink>
+                <NavLink to="/"> </NavLink>
+                <NavLink to="/users">Users</NavLink>
+                <NavLink to="/posts">Posts</NavLink>
 
             </div>
             <Outlet/>

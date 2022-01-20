@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 const Users = ({user}) => {
 
@@ -9,8 +9,13 @@ const Users = ({user}) => {
     return (
         <div>
 
-            <h4>ID:{id}</h4>
-            <p> Name:{name}</p> <Link to={id.toString()} state={{...user}}> details </Link>
+            <h3>ID:{id}</h3>
+
+            <p>name:{name}</p>
+
+             <NavLink to={id.toString()} state={{...user}}> details
+
+             </NavLink>
 
         </div>
     );

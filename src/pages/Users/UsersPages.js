@@ -10,29 +10,33 @@ const UsersPages = () => {
 
     const [usersPages, setUsersPages] = useState([]);
 
-   useEffect(()=>{
-       userServices.getAll().then(value => setUsersPages(value))
-   },[])
+    useEffect(() => {
+        userServices.getAll().then(value => setUsersPages([...value]))
+    }, []);
 
     return (
         <div>
 
             <div>
 
-                {usersPages.map(user => < Users key={user.id} user={user}/>)}
+                {usersPages.map(value => < Users key={value.id} user={value}/>)}
+
 
             </div>
-
+<hr/>
             <div>
                 <h3>User Details</h3>
+
                 <Outlet/>
 
-            </div>
 
+            </div>
 
 
         </div>
     );
+
+
 };
 
 export {UsersPages};
