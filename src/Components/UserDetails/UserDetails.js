@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 
 import {useLocation, useParams, Outlet, Link} from "react-router-dom";
 import {userServices} from "../../services";
-import UsersPostId from "../UsersPostId/UsersPostId";
+import {UsersPostId} from "../UsersPostId/UsersPostId";
 
 
 const UserDetails = () => {
@@ -28,6 +28,7 @@ const UserDetails = () => {
 
     return (
         <div>
+            <h3>User Details</h3>
             <div>
             {user && (
                <div>
@@ -57,7 +58,7 @@ const UserDetails = () => {
             </div>
             <hr/>
             <div>
-                <h3>User Post</h3>
+
                 <Outlet/>
             </div>
 

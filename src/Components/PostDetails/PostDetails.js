@@ -22,6 +22,7 @@ const PostDetails = () => {
 
     return (
         <div>
+            <h3>Posts Details</h3>
 <div>
     {post && (
         <div>

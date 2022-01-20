@@ -15,4 +15,4 @@ const UsersPostDetails = ({userPost: {userId, id, title, body}}) => {
     );
 };
 
-export default UsersPostDetails;
+export {UsersPostDetails};

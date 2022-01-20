@@ -1,0 +1,18 @@
+.FooterHead{
+    display: flex;
+    background: blueviolet;
+    margin: 0;
+    padding: 0;
+
+    justify-content: center;
+
+}
+.userFooter{
+    margin: 15px;
+    color: gold;
+    font-size: 50px;
+}
+.postsFooter{
+    color: gold;
+    font-size: 50px;
+}

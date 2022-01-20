@@ -3,7 +3,9 @@ import {Outlet} from "react-router-dom";
 
 
 import {userServices} from "../../services";
-import {Users} from "../../Components/Users/Users";
+import {Users} from "../../Components";
+import './UsersPages.css'
+
 
 const UsersPages = () => {
 
@@ -15,17 +17,17 @@ const UsersPages = () => {
     }, []);
 
     return (
-        <div>
+        <div className={'userPagesHeader'}>
+<hr/>
+            <div className={'userInfo'}>
 
-            <div>
-
-                {usersPages.map(value => < Users key={value.id} user={value}/>)}
+                {usersPages.map(value => <Users key={value.id} user={value}/>)}
 
 
             </div>
-<hr/>
+            <hr/>
             <div>
-                <h3>User Details</h3>
+
 
                 <Outlet/>
 

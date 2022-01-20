@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {useParams} from "react-router-dom";
 
 import {postServices} from "../../services";
-import Comments from "../comments/Comments";
+import {Comments} from "../comments/Comments";
 
 const CommentsDetails = () => {
 
@@ -17,8 +17,9 @@ const CommentsDetails = () => {
     },[])
 
     return (
-        <div>
 
+        <div>
+<h3>Comments</h3>
             {comments.map(comments =><Comments key={comments.id} comments={comments}/>)}
 
         </div>

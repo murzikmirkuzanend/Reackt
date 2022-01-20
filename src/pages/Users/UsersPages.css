@@ -1,0 +1,19 @@
+.userPagesHeader{
+    display: flex;
+    background: silver;
+    justify-content: flex-start;
+
+
+
+
+}
+.userInfo{
+
+     margin-right: 750px;
+    display: flex;
+    color: red;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: flex-start;
+
+}
