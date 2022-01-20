@@ -3,7 +3,7 @@ import {Outlet} from "react-router-dom";
 
 
 import {postServices} from "../../services";
-import Posts from "../Posts/Posts";
+import Posts from "../../Components/Posts/Posts";
 
 const PostsPages = () => {
 

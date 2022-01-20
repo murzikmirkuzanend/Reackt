@@ -4,7 +4,7 @@ import {Route, Routes} from 'react-router-dom'
 import {CommentsDetails, Footer, PostDetails, UserDetails} from "./Components";
 import {UsersPages} from "./pages/Users/UsersPages";
 import {PostsPages} from "./pages/PostsPages/PostsPages";
-import UsersPostDetails from "./pages/UsersPostDetails/UsersPostDetails";
+import UsersPostDetails from "./Components/UsersPostDetails/UsersPostDetails";
 import UsersPostId from "./Components/UsersPostId/UsersPostId";
 
 
