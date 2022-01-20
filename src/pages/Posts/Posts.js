@@ -1,17 +1,20 @@
 import React from 'react';
+import {NavLink} from "react-router-dom";
 
 const Posts = ({posts}) => {
-    
-    const {id, name} = posts;
-    
+
+    const {id, title} = posts;
+
     return (
         <div>
 
             <div>
                 <h3>ID:{id}</h3>
-                <a>name:{name}</a>
+                <div>title:{title}</div>
+                <NavLink to={id.toString()} state={{...posts}}>details</NavLink>
+
             </div>
-            
+
         </div>
     );
 };

@@ -1,19 +1,33 @@
 import React, {useEffect, useState} from 'react';
+import {Outlet} from "react-router-dom";
+
+
 import {postServices} from "../../services";
 import Posts from "../Posts/Posts";
 
 const PostsPages = () => {
 
-    const [postPages, setPostPages] = useState([]);
+    const [post, setPost] = useState([]);
 
 
     useEffect(()=>{
-        postServices.getAll().then(value => setPostPages(value))
-    },[])
+        postServices.getAll().then(value => setPost([...value]))
+    },[]);
+
     return (
+<div>
         <div>
-            {postPages.map(value => <Posts key={value.id} posts={value}/>)}
+
+            {post.map(post => <Posts key={post.id} posts={post}/>)}
         </div>
+
+        <div>
+            <h3>Posts Details</h3>
+
+            <Outlet/>
+
+        </div>
+</div>
     );
 };
 
