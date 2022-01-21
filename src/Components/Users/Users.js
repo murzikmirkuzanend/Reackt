@@ -1,6 +1,7 @@
 import React from 'react';
 
 import {NavLink} from "react-router-dom";
+import Albums from "../Albums/Albums";
 
 const Users = ({user}) => {
 
@@ -13,9 +14,9 @@ const Users = ({user}) => {
 
             <p>name:{name}</p>
 
-             <NavLink to={id.toString()} state={{...user}}> details
+             <NavLink to={id.toString()} state={{...user}}> <button> details </button></NavLink>
+             <NavLink to={id +'/albums'} route={<Albums/>}> <button> get Albums </button></NavLink>
 
-             </NavLink>
 
         </div>
     );
