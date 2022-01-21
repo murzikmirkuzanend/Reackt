@@ -1,7 +1,8 @@
 import React from 'react';
 
 import {NavLink} from "react-router-dom";
-import Albums from "../Albums/Albums";
+import {Albums} from "../Albums/Albums";
+
 
 const Users = ({user}) => {
 
