@@ -1,21 +1,22 @@
-import React from 'react'
-    import './UserStayil.css';
+import React from 'react';
 
+const User = ({user:{id, name, username, address:{street,suite,city,zipcode,geo:{lat,lng}},phone,website}}) => {
+    
 
-
-const User = (props) => {
-
-    let {id, name, username, email} = props;
-
-
+    
     return (
-        <div className={'itemUsers'}>
-            <div className={'item'}>
-                <p>ID:{id}</p>
-                <p>Name:{name}</p>
-                <p>Username{username}</p>
-                <p>email:{email}</p>
-            </div>
+        <div>
+            {id}
+            {name}
+            {username}
+            {street}
+            {suite}
+            {city}
+            {zipcode}
+            {lat}
+            {lng}
+            {phone}
+            {website}
 
         </div>
     );

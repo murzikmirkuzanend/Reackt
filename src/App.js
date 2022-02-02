@@ -1,28 +1,16 @@
-import './App.css'
+import Form from "./Componetnts/Form/Form";
+import Cars from "./Componetnts/Cars/Cars";
+import Users from "./pages/Users/Users";
 
-import Users from './Componetnts/Users/Users'
-import Posts from './Componetnts/Posts/Posts'
-import Comments from './Componetnts/Comments/Comments'
-    ;
 
 function App() {
     return (
 
-        <div className={'heder'}>
-            <div className={'phaser'}>
-            <div className={'user'}>
-                <Users/>
-            </div>
-            
-            <div className={'post'}>
-                <Posts/>
-            </div>
-            </div>
+        <div>
 
-            <div className={'comments'}>
-                <Comments/>
-            </div>
-
+           {/* <Form/>
+            <Cars/>*/}
+            <Users/>
 
         </div>
 
