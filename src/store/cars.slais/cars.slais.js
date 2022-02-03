@@ -74,11 +74,11 @@ const carSlice = createSlice({
 })
 
 
-const carReducer = carSlice.reducer;
+export const carReducer = carSlice.reducer;
 
 const {addCar, deleteCar} = carSlice.actions;
 
-export default carReducer
+
 
 export const carActions ={
     addCar, deleteCar

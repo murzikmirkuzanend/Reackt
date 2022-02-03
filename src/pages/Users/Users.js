@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import {getAllUsers} from "../../store/users.slaice/users.slaice";
+import {getAllUsers} from "../../store";
 import User from "../../Componetnts/User/User";
 
 const Users = () => {

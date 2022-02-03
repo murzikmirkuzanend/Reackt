@@ -1,0 +1,17 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 25px;
+}
+
+.carsFooter, .usersFooter, .postFooter, .commentsFooter {
+    margin: 25px;
+
+}
+
+button{
+    font-size: 25px;
+    color: gold;
+    background: black;
+}

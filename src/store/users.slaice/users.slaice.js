@@ -40,5 +40,5 @@ const usersSlaice = createSlice({
         }
     }
 });
-const userReducer = usersSlaice.reducer;
-export  default  userReducer
+
+export const userReducer = usersSlaice.reducer;

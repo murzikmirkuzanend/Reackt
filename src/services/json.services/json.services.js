@@ -7,12 +7,12 @@ export const usersServices ={
         .then(value => value.data)
 }
 
-// export const postsServices ={
-//     getAll:()=> axiosServiceJson.get(urlsJson.posts)
-//         .then(value => value.data)
-// }
-//
-// export const commentsServices ={
-//     getAll:()=> axiosServiceJson.get(urlsJson.comments)
-//         .then(value => value.data)
-// }
+export const postsServices ={
+    getAll:()=> axiosServiceJson.get(urlsJson.posts)
+        .then(value => value.data)
+}
+
+export const commentsServices ={
+    getAll:()=> axiosServiceJson.get(urlsJson.comments)
+        .then(value => value.data)
+}
