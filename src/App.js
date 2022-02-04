@@ -1,3 +1,5 @@
+import Form from "./components/Form/Form";
+import Massifs from "./components/Massifs/Massifs";
 
 
 function App() {
@@ -7,7 +9,8 @@ function App() {
 
         <div>
 
-
+<Form/>
+            <Massifs/>
 
 
         </div>
