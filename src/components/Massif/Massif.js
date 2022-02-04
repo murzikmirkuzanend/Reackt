@@ -13,7 +13,7 @@ const Massif = ({massif: {id, name, status}}) => {
     return (
         <div className={'Header'}>
             <input type="checkbox" value={status} onChange={() => dispatch(changeStatus({id}))}/>
-            <div  className={'completed'}>Name: {name}</div>
+            <div  className={'main'}>Name: {name}</div>
             <button onClick={() => dispatch(deleteMassif({id}))}>Delete</button>
         </div>
     );
