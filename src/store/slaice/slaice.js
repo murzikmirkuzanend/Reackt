@@ -13,7 +13,7 @@ const slice = createSlice({
             state.massifs.push({id: new Date().getTime(), name: action.payload.massif, status: false})
         },
         changeStatus: (state, action) => {
-            state.massifs.find(massif => massif.id === action.payload.id);
+            state.massifs.find(massif => massif.id !== action.payload.id);
             massif.status = !massif.status
         },
         deleteMassif:(state, action) => {
